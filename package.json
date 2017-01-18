@@ -1,0 +1,51 @@
+{
+  "name": "@ava/babel-preset-transform-test-files",
+  "version": "0.0.0",
+  "description": "Test file transforms as used by AVA",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "espower-patterns.json"
+  ],
+  "scripts": {
+    "test": "ava",
+    "posttest": "xo",
+    "coverage": "nyc npm test"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avajs/babel-preset-transform-test-files.git"
+  },
+  "keywords": [
+    "ava",
+    "babel-preset"
+  ],
+  "author": "Mark Wubben (https://novemberborn.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avajs/babel-preset-transform-test-files/issues"
+  },
+  "homepage": "https://github.com/avajs/babel-preset-transform-test-files#readme",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-core": "^6.21.0",
+    "coveralls": "^2.11.15",
+    "empower-core": "^0.6.1",
+    "nyc": "^10.1.2",
+    "xo": "^0.17.1"
+  },
+  "dependencies": {
+    "babel-plugin-ava-throws-helper": "^1.0.0",
+    "babel-plugin-espower": "^2.3.2"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ]
+  }
+}
