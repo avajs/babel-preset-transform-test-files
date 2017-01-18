@@ -59,3 +59,13 @@ test('resulting preset transforms assertion patterns', t => {
 	});
 	t.deepEqual(appliedPatterns, ESPOWER_PATTERNS);
 });
+
+test('the espower plugin can be disabled', t => {
+	const expected = 't.true(value);';
+	const {code} = babel.transform(expected, {
+		ast: false,
+		babelrc: false,
+		presets: [[require.resolve('./'), {powerAssert: false}]]
+	});
+	t.true(code === expected);
+});

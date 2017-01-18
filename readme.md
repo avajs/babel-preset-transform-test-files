@@ -16,7 +16,16 @@ $ npm install --save @ava/babel-preset-transform-test-files
 
 ## Usage
 
-Add `@ava/transform-test-files` to your [Babel] presets.
+Add `@ava/transform-test-files` to your [Babel] presets. You can disable
+`babel-plugin-espower` by setting the `powerAssert` option to `false`:
+
+```json
+{
+  "presets": [
+    ["@ava/transform-test-files", {"powerAsssert": false}]
+  ]
+}
+```
 
 [AVA]: https://ava.li
 [Babel]: https://babeljs.io/
