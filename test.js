@@ -4,6 +4,7 @@ import test from 'ava';
 import * as babel from 'babel-core';
 import throwsHelper from 'babel-plugin-ava-throws-helper';
 import empower from 'empower-core';
+import proxyquire from 'proxyquire';
 
 import buildPreset from './index';
 
@@ -68,4 +69,20 @@ test('the espower plugin can be disabled', t => {
 		presets: [[require.resolve('./'), {powerAssert: false}]]
 	});
 	t.true(code === expected);
+});
+
+test('computes correct package hash', t => {
+	t.plan(2);
+
+	proxyquire('./package-hash', {
+		'package-hash': {
+			sync([preset, ...plugins]) {
+				t.true(preset === require.resolve('./package.json'));
+				t.deepEqual(plugins, [
+					require.resolve('babel-plugin-espower/package.json'),
+					require.resolve('babel-plugin-ava-throws-helper/package.json')
+				]);
+			}
+		}
+	});
 });

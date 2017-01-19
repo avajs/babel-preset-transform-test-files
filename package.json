@@ -5,7 +5,8 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "espower-patterns.json"
+    "espower-patterns.json",
+    "package-hash.js"
   ],
   "scripts": {
     "test": "ava",
@@ -35,11 +36,13 @@
     "coveralls": "^2.11.15",
     "empower-core": "^0.6.1",
     "nyc": "^10.1.2",
+    "proxyquire": "^1.7.10",
     "xo": "^0.17.1"
   },
   "dependencies": {
     "babel-plugin-ava-throws-helper": "^1.0.0",
-    "babel-plugin-espower": "^2.3.2"
+    "babel-plugin-espower": "^2.3.2",
+    "package-hash": "^1.2.0"
   },
   "nyc": {
     "reporter": [

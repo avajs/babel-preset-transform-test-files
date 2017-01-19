@@ -27,5 +27,8 @@ Add `@ava/transform-test-files` to your [Babel] presets. You can disable
 }
 ```
 
+Require `@ava/babel-preset-transform-test-files/package-hash` to get a combined
+hash for the installed version of the preset, as well as the plugins used.
+
 [AVA]: https://ava.li
 [Babel]: https://babeljs.io/
