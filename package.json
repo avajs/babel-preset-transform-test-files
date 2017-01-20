@@ -1,6 +1,6 @@
 {
   "name": "@ava/babel-preset-transform-test-files",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Test file transforms as used by AVA",
   "main": "index.js",
   "files": [
