@@ -1,18 +1,16 @@
 import {runInNewContext} from 'vm';
-
 import test from 'ava';
 import * as babel from 'babel-core';
 import throwsHelper from 'babel-plugin-ava-throws-helper';
 import empower from 'empower-core';
 import proxyquire from 'proxyquire';
-
-import buildPreset from './index';
+import buildPreset from '.';
 
 const ESPOWER_PATTERNS = require('./espower-patterns.json');
 
 test('throws-helper is included', t => {
 	const {plugins} = buildPreset(babel);
-	t.true(plugins.indexOf(throwsHelper) > -1);
+	t.true(plugins.indexOf(throwsHelper) !== -1);
 });
 
 test('resulting preset transforms assertion patterns', t => {
@@ -40,7 +38,7 @@ test('resulting preset transforms assertion patterns', t => {
 	});
 
 	const appliedPatterns = [];
-	// Create a stub assertion object that can be enhanced using empower-core.
+	// Create a stub assertion object that can be enhanced using empower-core
 	const assert = ESPOWER_PATTERNS
 		.map(p => /^t\.(.+)\(/.exec(p)[1])
 		.reduce((assert, name) => {
@@ -51,7 +49,7 @@ test('resulting preset transforms assertion patterns', t => {
 	runInNewContext(code, {
 		t: empower(assert, {
 			onSuccess({matcherSpec: {pattern}, powerAssertContext}) {
-				if (powerAssertContext) { // Only available if the empower plugin transformed the assertion.
+				if (powerAssertContext) { // Only available if the empower plugin transformed the assertion
 					appliedPatterns.push(pattern);
 				}
 			},
@@ -68,7 +66,7 @@ test('the espower plugin can be disabled', t => {
 		babelrc: false,
 		presets: [[require.resolve('./'), {powerAssert: false}]]
 	});
-	t.true(code === expected);
+	t.is(code, expected);
 });
 
 test('computes correct package hash', t => {
@@ -77,7 +75,7 @@ test('computes correct package hash', t => {
 	proxyquire('./package-hash', {
 		'package-hash': {
 			sync([preset, ...plugins]) {
-				t.true(preset === require.resolve('./package.json'));
+				t.is(preset, require.resolve('./package.json'));
 				t.deepEqual(plugins, [
 					require.resolve('babel-plugin-espower/package.json'),
 					require.resolve('babel-plugin-ava-throws-helper/package.json')
