@@ -5,8 +5,6 @@
 	"t.false(value, [message])",
 	"t.is(value, expected, [message])",
 	"t.not(value, expected, [message])",
-	"t.deepEqual(value, expected, [message])",
-	"t.notDeepEqual(value, expected, [message])",
 	"t.regex(contents, regex, [message])",
 	"t.notRegex(contents, regex, [message])"
 ]
