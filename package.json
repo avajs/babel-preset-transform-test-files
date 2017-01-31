@@ -5,6 +5,9 @@
   "license": "MIT",
   "repository": "avajs/babel-preset-transform-test-files",
   "author": "Mark Wubben (https://novemberborn.net)",
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=4"
   },
