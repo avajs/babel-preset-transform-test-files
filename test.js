@@ -25,8 +25,6 @@ test('resulting preset transforms assertion patterns', t => {
 		t.falsy(value)
 		t.true(value)
 		t.false(value)
-		t.is(value, expected)
-		t.not(value, expected)
 		t.regex(contents, regex)
 		t.notRegex(contents, regex)
 	`, {
