@@ -26,7 +26,7 @@
     "babel-preset"
   ],
   "dependencies": {
-    "babel-plugin-ava-throws-helper": "^1.0.0",
+    "@ava/babel-plugin-throws-helper": "^2.0.0",
     "babel-plugin-espower": "^2.3.2"
   },
   "devDependencies": {

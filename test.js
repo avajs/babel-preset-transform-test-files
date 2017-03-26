@@ -1,7 +1,7 @@
 import {runInNewContext} from 'vm';
 import test from 'ava';
 import * as babel from 'babel-core';
-import throwsHelper from 'babel-plugin-ava-throws-helper';
+import throwsHelper from '@ava/babel-plugin-throws-helper';
 import empower from 'empower-core';
 import buildPreset from '.';
 
