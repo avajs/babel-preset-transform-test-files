@@ -30,12 +30,12 @@
     "babel-plugin-espower": "^2.3.2"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.2",
     "babel-core": "^6.21.0",
     "coveralls": "^2.11.15",
     "empower-core": "^0.6.1",
     "nyc": "^10.1.2",
-    "xo": "^0.17.1"
+    "xo": "^0.18.1"
   },
   "nyc": {
     "reporter": [
