@@ -22,7 +22,7 @@ Add `@ava/transform-test-files` to your [Babel] presets. You can disable `babel-
 ```json
 {
   "presets": [
-    ["@ava/transform-test-files", {"powerAsssert": false}]
+    ["@ava/transform-test-files", {"powerAssert": false}]
   ]
 }
 ```
