@@ -30,7 +30,7 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "babel-core": "^6.21.0",
-    "coveralls": "^2.11.15",
+    "codecov": "^3.0.0",
     "empower-core": "^0.6.1",
     "nyc": "^11.4.1",
     "xo": "^0.18.2"
