@@ -1,6 +1,6 @@
 import {runInNewContext} from 'vm';
 import test from 'ava';
-import * as babel from 'babel-core';
+import * as babel from '@babel/core';
 import throwsHelper from '@ava/babel-plugin-throws-helper';
 import empower from 'empower-core';
 import buildPreset from '.';
@@ -29,6 +29,7 @@ test('resulting preset transforms assertion patterns', t => {
 	`, {
 		ast: false,
 		babelrc: false,
+		filename: __filename,
 		presets: [buildPreset]
 	});
 
