@@ -5,9 +5,6 @@
   "license": "MIT",
   "repository": "avajs/babel-preset-transform-test-files",
   "author": "Mark Wubben (https://novemberborn.net)",
-  "publishConfig": {
-    "access": "public"
-  },
   "engines": {
     "node": ">=4"
   },
@@ -16,8 +13,7 @@
   },
   "files": [
     "index.js",
-    "espower-patterns.json",
-    "package-hash.js"
+    "espower-patterns.json"
   ],
   "keywords": [
     "ava",
