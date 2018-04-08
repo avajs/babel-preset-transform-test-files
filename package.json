@@ -6,7 +6,7 @@
   "repository": "avajs/babel-preset-transform-test-files",
   "author": "Mark Wubben (https://novemberborn.net)",
   "engines": {
-    "node": ">=4"
+    "node": ">=6.12.3 <7 || >=8.9.4"
   },
   "scripts": {
     "test": "xo && nyc ava"
