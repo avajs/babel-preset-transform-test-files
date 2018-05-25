@@ -20,16 +20,16 @@
     "babel-preset"
   ],
   "dependencies": {
-    "@ava/babel-plugin-throws-helper": "3.0.0-beta.4",
+    "@ava/babel-plugin-throws-helper": "3.0.0-beta.5",
     "babel-plugin-espower": "3.0.0-beta.1"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.44",
+    "@babel/core": "7.0.0-beta.48",
     "ava": "^0.25.0",
-    "codecov": "^3.0.0",
+    "codecov": "^3.0.2",
     "empower-core": "^0.6.2",
-    "nyc": "^11.6.0",
-    "xo": "^0.20.3"
+    "nyc": "^11.8.0",
+    "xo": "^0.21.1"
   },
   "nyc": {
     "reporter": [
