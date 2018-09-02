@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "@ava/babel-plugin-throws-helper": "^3.0.0",
-    "babel-plugin-espower": "3.0.0-beta.2"
+    "babel-plugin-espower": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

@@ -5,10 +5,10 @@ module.exports = (context, options) => {
 	const plugins = [];
 
 	if (!options || options.powerAssert !== false) {
-		plugins.push(require('babel-plugin-espower/create')(context, {
+		plugins.push([require('babel-plugin-espower'), {
 			embedAst: true,
 			patterns: ESPOWER_PATTERNS
-		}));
+		}]);
 	}
 
 	plugins.push(require('@ava/babel-plugin-throws-helper'));
