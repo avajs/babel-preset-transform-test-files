@@ -1,8 +1,3 @@
 [
-	"t.truthy(value, [message])",
-	"t.falsy(value, [message])",
-	"t.true(value, [message])",
-	"t.false(value, [message])",
-	"t.regex(contents, regex, [message])",
-	"t.notRegex(contents, regex, [message])"
+	"t.assert(value, [message])"
 ]

@@ -15,17 +15,9 @@ test('throws-helper is included', t => {
 test('resulting preset transforms assertion patterns', t => {
 	const {code} = babel.transform(`
 		const value = 'value'
-		const expected = 'expected'
-		const contents = 'contents'
-		const regex = /regex/
 
 		// "Execute" the patterns. Hardcode them here, otherwise it's cheating.
-		t.truthy(value)
-		t.falsy(value)
-		t.true(value)
-		t.false(value)
-		t.regex(contents, regex)
-		t.notRegex(contents, regex)
+		t.assert(value)
 	`, {
 		ast: false,
 		babelrc: false,
@@ -56,7 +48,7 @@ test('resulting preset transforms assertion patterns', t => {
 });
 
 test('the espower plugin can be disabled', t => {
-	const expected = 't.true(value);';
+	const expected = 't.assert(value);';
 	const {code} = babel.transform(expected, {
 		ast: false,
 		babelrc: false,
