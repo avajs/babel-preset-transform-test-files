@@ -6,7 +6,7 @@
   "repository": "avajs/babel-preset-transform-test-files",
   "author": "Mark Wubben (https://novemberborn.net)",
   "engines": {
-    "node": ">=6.12.3 <7 || >=8.9.4 <9 || >=10.0.0"
+    "node": ">=8.9.4 <9 || >=10.0.0 <11 || >=12.0.0"
   },
   "scripts": {
     "test": "xo && nyc ava"
@@ -24,11 +24,11 @@
     "babel-plugin-espower": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "ava": "^1.3.1",
-    "codecov": "^3.2.0",
+    "@babel/core": "^7.5.4",
+    "ava": "^2.2.0",
+    "codecov": "^3.5.0",
     "empower-core": "^1.2.0",
-    "nyc": "^13.3.0",
+    "nyc": "^14.1.1",
     "xo": "^0.24.0"
   },
   "nyc": {
