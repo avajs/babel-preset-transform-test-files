@@ -20,11 +20,11 @@
     "babel-preset"
   ],
   "dependencies": {
-    "@ava/babel-plugin-throws-helper": "^3.0.0",
+    "@ava/babel-plugin-throws-helper": "^4.0.0",
     "babel-plugin-espower": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
+    "@babel/core": "^7.5.5",
     "ava": "^2.2.0",
     "codecov": "^3.5.0",
     "empower-core": "^1.2.0",
